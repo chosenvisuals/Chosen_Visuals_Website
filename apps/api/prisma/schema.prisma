@@ -1,0 +1,200 @@
+// Prisma schema for Chosen Visuals.
+// This mirrors docs/ARCHITECTURE.md Section 5.5 — keep both in sync when the schema changes.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  visitor
+  student
+  client
+  instructor
+  school_rep
+  staff
+  admin
+}
+
+model User {
+  id               String   @id @db.Uuid
+  name             String
+  email            String   @unique
+  role             UserRole @default(visitor)
+  organizationName String?
+  createdAt        DateTime @default(now())
+
+  coursesTaught       Course[]           @relation("InstructorCourses")
+  enrollments         Enrollment[]
+  serviceRequests     ServiceRequest[]
+  payments            Payment[]
+  eventRegistrations  EventRegistration[]
+  blogPosts           BlogPost[]
+}
+
+model Course {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  description   String
+  category      String
+  price         Int
+  instructorId  String   @db.Uuid
+  instructor    User     @relation("InstructorCourses", fields: [instructorId], references: [id])
+  videoProvider String?
+  videoRef      String?
+  isPublished   Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  enrollments Enrollment[]
+}
+
+enum EnrollmentStatus {
+  pending
+  active
+  completed
+}
+
+model Enrollment {
+  id                  String           @id @default(cuid())
+  userId              String           @db.Uuid
+  user                User             @relation(fields: [userId], references: [id])
+  courseId            String
+  course              Course           @relation(fields: [courseId], references: [id])
+  status              EnrollmentStatus @default(pending)
+  progressPercent     Int              @default(0)
+  certificateIssuedAt DateTime?
+  enrolledAt          DateTime         @default(now())
+
+  @@unique([userId, courseId])
+}
+
+enum EventType {
+  conference
+  workshop
+  networking
+  tour
+}
+
+model Event {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  type        EventType
+  description String
+  location    String
+  startDate   DateTime
+  endDate     DateTime
+  capacity    Int
+  isPublished Boolean   @default(false)
+
+  registrations EventRegistration[]
+}
+
+enum RegistrationStatus {
+  registered
+  attended
+  cancelled
+}
+
+model EventRegistration {
+  id         String             @id @default(cuid())
+  eventId    String
+  event      Event              @relation(fields: [eventId], references: [id])
+  userId     String?            @db.Uuid
+  user       User?              @relation(fields: [userId], references: [id])
+  fullName   String
+  email      String
+  phone      String
+  schoolName String?
+  status     RegistrationStatus @default(registered)
+  createdAt  DateTime           @default(now())
+}
+
+enum ServiceRequestStatus {
+  new
+  quoted
+  confirmed
+  in_progress
+  completed
+}
+
+model ServiceRequest {
+  id           String                @id @default(cuid())
+  clientId     String?               @db.Uuid
+  client       User?                 @relation(fields: [clientId], references: [id])
+  serviceType  String
+  description  String
+  status       ServiceRequestStatus  @default(new)
+  quotedAmount Int?
+  createdAt    DateTime              @default(now())
+}
+
+enum PaymentProviderName {
+  paystack
+  stripe
+}
+
+enum PaymentPurpose {
+  enrollment
+  service
+  event
+}
+
+enum PaymentStatus {
+  pending
+  success
+  failed
+}
+
+model Payment {
+  id        String              @id @default(cuid())
+  userId    String              @db.Uuid
+  user      User                @relation(fields: [userId], references: [id])
+  reference String              @unique
+  provider  PaymentProviderName
+  amount    Int
+  currency  String              @default("NGN")
+  purpose   PaymentPurpose
+  status    PaymentStatus       @default(pending)
+  createdAt DateTime            @default(now())
+}
+
+model PortfolioItem {
+  id          String   @id @default(cuid())
+  title       String
+  category    String
+  mediaUrls   String[]
+  description String
+  publishedAt DateTime @default(now())
+}
+
+enum BlogStatus {
+  draft
+  published
+}
+
+model BlogPost {
+  id          String     @id @default(cuid())
+  title       String
+  slug        String     @unique
+  body        String
+  coverImage  String?
+  authorId    String     @db.Uuid
+  author      User       @relation(fields: [authorId], references: [id])
+  status      BlogStatus @default(draft)
+  publishedAt DateTime?
+}
+
+model Testimonial {
+  id           String  @id @default(cuid())
+  clientName   String
+  organization String?
+  quote        String
+  isPublished  Boolean @default(false)
+}
