@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter", 
+});
 
 export const metadata: Metadata = {
   title: "Chosen Visuals — Imagine. Create. Inspire.",
@@ -12,10 +16,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        <main className="mx-auto max-w-6xl px-6 py-12 min-h-[60vh]">{children}</main>
-        <Footer />
+      <body className={`${inter.variable} font-sans text-brand-navy antialiased`}>
+        {children}
       </body>
     </html>
   );
