@@ -34,6 +34,16 @@
 - Set up Supabase client and environment variables.
 - Configured the Prisma schema (if applicable in hybrid approaches) and `.env` files.
 
+### 4. Custom Email System (Resend & Supabase)
+- Built a premium React Email template (`WelcomeEmail.tsx` and `EmailLayout.tsx`) perfectly matching the brand's exact Tailwind palette (e.g. `brand-navy`, `cv-gold`, `brand-blue`).
+- Setup an internal API route to compile the React templates into raw, minified HTML.
+- Injected the raw HTML into the Supabase Dashboard for the "Confirm Signup" template.
+- Configured Supabase Auth to use custom Resend SMTP credentials to successfully send branded confirmation emails.
+
+### 5. Academy Dashboard (Phase 1)
+- Installed and integrated `lucide-react` for beautiful, scalable SVG icons.
+- Built a highly-polished `Sidebar.tsx` matching the premium school portal design references, including active state highlighting, branded styling, and an "Upgrade to Pro" glassmorphism card.
+- Built a sticky `DashboardHeader.tsx` featuring a search bar, cart, notifications, and user profile avatar with exact brand styles.
 ## 🚀 Where We Are Going (Next Steps)
 1. **Dashboard & Protected Routes:** Build out the authenticated user dashboard that users are redirected to after login.
 2. **Additional Marketing Pages:** Complete the remaining marketing sections (Academy, Creative Solutions, Services, etc.).
