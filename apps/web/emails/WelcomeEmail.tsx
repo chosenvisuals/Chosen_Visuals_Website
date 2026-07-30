@@ -65,8 +65,8 @@ const buttonContainer = {
 };
 
 const button = {
-  backgroundColor: '#ffffff',
-  color: '#000000',
+  backgroundColor: '#0052FF',
+  color: '#ffffff',
   fontSize: '16px',
   fontWeight: 'bold',
   textDecoration: 'none',

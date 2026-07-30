@@ -47,7 +47,7 @@ export const EmailLayout = ({ previewText, children }: EmailLayoutProps) => {
 export default EmailLayout;
 
 const main = {
-  backgroundColor: '#0a0a0a',
+  backgroundColor: '#0A1128',
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   color: '#ffffff',
@@ -55,8 +55,8 @@ const main = {
 };
 
 const container = {
-  backgroundColor: '#171717',
-  border: '1px solid #262626',
+  backgroundColor: '#001B60',
+  border: '1px solid #0052FF',
   borderRadius: '8px',
   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
   margin: '0 auto',
@@ -73,12 +73,12 @@ const logoText = {
   fontSize: '24px',
   fontWeight: 'bold',
   letterSpacing: '2px',
-  color: '#ffffff',
+  color: '#F8A328',
   margin: '0',
 };
 
 const hr = {
-  borderColor: '#262626',
+  borderColor: '#F8A328',
   margin: '20px 0',
 };
 
