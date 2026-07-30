@@ -45,7 +45,7 @@ export function Navbar() {
           </button>
           <div className="w-px h-6 bg-gray-200 hidden sm:block ml-2 mr-2"></div>
           <Link
-            href="/login"
+            href="/register"
             className="rounded-full bg-brand-blue px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-brand-blue/90 flex items-center gap-2 transition-transform hover:scale-105"
           >
             Apply Now
