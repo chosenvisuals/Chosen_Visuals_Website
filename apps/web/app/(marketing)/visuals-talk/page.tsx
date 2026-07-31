@@ -81,7 +81,7 @@ export default function VisualsTalkPage() {
             {events.map((evt, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-[2rem] overflow-hidden hover:shadow-xl hover:border-[#0052FF] transition-all group flex flex-col">
                 <div className="h-48 bg-gray-100 relative">
-                  <Image src={`https://picsum.photos/seed/chosen47/800/600"Event" fill className="object-cover group-hover:scale-105 transition duration-500" />
+                  <Image src={`https://picsum.photos/seed/chosen47_${i}/800/600`} alt="Event" fill className="object-cover group-hover:scale-105 transition duration-500" />
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#000d26]">
                     {evt.status}
                   </div>
