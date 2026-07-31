@@ -7,7 +7,7 @@ import {
 
 export default function AcademyLandingPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#000d26] transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
@@ -18,10 +18,10 @@ export default function AcademyLandingPage() {
                 <div className="w-2 h-2 rounded-full bg-[#0052FF]" />
                 Academy
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-[#000d26] leading-tight mb-6 tracking-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold text-[#000d26] dark:text-white leading-tight mb-6 tracking-tight">
                 Your Future <br/><span className="text-[#0052FF]">Starts</span> Here.
               </h1>
-              <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-md">
+              <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed max-w-md">
                 Explore schools, discover career paths and gain in-demand skills with hands-on learning from industry experts.
               </p>
               
@@ -31,7 +31,7 @@ export default function AcademyLandingPage() {
                 <input 
                   type="text" 
                   placeholder="What would you like to learn?" 
-                  className="w-full pl-12 pr-14 py-4 rounded-full border border-gray-200 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF]"
+                  className="w-full pl-12 pr-14 py-4 rounded-full border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#0a1128] text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF]"
                 />
                 <button className="absolute right-2 top-2 bottom-2 aspect-square bg-[#0052FF] text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
                   <ArrowRight className="w-5 h-5" />
@@ -39,7 +39,7 @@ export default function AcademyLandingPage() {
               </div>
 
               {/* Badges */}
-              <div className="flex flex-wrap gap-4 text-sm font-semibold text-gray-600">
+              <div className="flex flex-wrap gap-4 text-sm font-semibold text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#0052FF]" /> Expert Instructors</div>
                 <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#0052FF]" /> Hands-on Projects</div>
                 <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-[#0052FF]" /> Industry Recognized</div>
@@ -57,13 +57,13 @@ export default function AcademyLandingPage() {
                 priority
               />
               {/* Floating Watch Video Button */}
-              <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-md p-4 rounded-2xl flex items-center gap-4 shadow-xl border border-white/20 cursor-pointer hover:-translate-y-1 transition-transform">
+              <div className="absolute bottom-8 right-8 bg-white/90 dark:bg-[#000d26]/90 backdrop-blur-md p-4 rounded-2xl flex items-center gap-4 shadow-xl border border-white/20 dark:border-gray-800 cursor-pointer hover:-translate-y-1 transition-transform">
                 <button className="w-12 h-12 bg-[#0052FF] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
                   <Play className="w-5 h-5 ml-1" />
                 </button>
                 <div>
-                  <p className="font-bold text-[#000d26]">Watch Video</p>
-                  <p className="text-xs text-gray-500">See how we empower creatives</p>
+                  <p className="font-bold text-[#000d26] dark:text-white">Watch Video</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">See how we empower creatives</p>
                 </div>
               </div>
             </div>
@@ -72,13 +72,13 @@ export default function AcademyLandingPage() {
       </section>
 
       {/* Popular Career Paths */}
-      <section className="py-16 bg-gray-50/50 border-t border-gray-100">
+      <section className="py-16 bg-gray-50/50 dark:bg-[#000d26] border-t border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
               <p className="text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-2">POPULAR CAREER PATHS</p>
-              <h2 className="text-3xl font-bold text-[#000d26] max-w-sm">Choose Your Path. We'll Guide You.</h2>
-              <p className="text-gray-500 mt-2 text-sm">Follow a proven learning path and build in-demand skills step by step.</p>
+              <h2 className="text-3xl font-bold text-[#000d26] dark:text-white max-w-sm">Choose Your Path. We'll Guide You.</h2>
+              <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">Follow a proven learning path and build in-demand skills step by step.</p>
             </div>
             <Link href="/academy/paths" className="text-[#0052FF] font-bold flex items-center gap-1 hover:gap-2 transition-all">
               View all career paths <ArrowRight className="w-4 h-4" />
@@ -86,10 +86,10 @@ export default function AcademyLandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <PathCard icon={Layout} color="text-purple-600" bgColor="bg-purple-100" title="UI/UX Designer" steps={8} />
-            <PathCard icon={Code} color="text-blue-600" bgColor="bg-blue-100" title="Full-Stack Developer" steps={9} />
-            <PathCard icon={Shield} color="text-green-600" bgColor="bg-green-100" title="Cybersecurity Analyst" steps={10} />
-            <PathCard icon={LineChart} color="text-orange-600" bgColor="bg-orange-100" title="Data Analyst" steps={8} />
+            <PathCard icon={Layout} color="text-purple-600 dark:text-purple-400" bgColor="bg-purple-100 dark:bg-purple-900/30" title="UI/UX Designer" steps={8} />
+            <PathCard icon={Code} color="text-blue-600 dark:text-blue-400" bgColor="bg-blue-100 dark:bg-blue-900/30" title="Full-Stack Developer" steps={9} />
+            <PathCard icon={Shield} color="text-green-600 dark:text-green-400" bgColor="bg-green-100 dark:bg-green-900/30" title="Cybersecurity Analyst" steps={10} />
+            <PathCard icon={LineChart} color="text-orange-600 dark:text-orange-400" bgColor="bg-orange-100 dark:bg-orange-900/30" title="Data Analyst" steps={8} />
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function AcademyLandingPage() {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-4">
               <h2 className="text-[#0052FF] font-bold text-sm tracking-widest uppercase">OUR SCHOOLS</h2>
-              <p className="text-gray-500 text-sm hidden md:block">Explore our schools and start your journey today.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm hidden md:block">Explore our schools and start your journey today.</p>
             </div>
             <Link href="/academy/schools" className="text-[#0052FF] font-bold flex items-center gap-1 hover:gap-2 transition-all text-sm">
               View all schools <ArrowRight className="w-4 h-4" />
@@ -108,20 +108,20 @@ export default function AcademyLandingPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            <SchoolCard icon={Layout} color="text-pink-600" title="Design" courses={12} />
-            <SchoolCard icon={Code} color="text-blue-600" title="Programming" courses={15} />
-            <SchoolCard icon={Shield} color="text-green-600" title="Cybersecurity" courses={10} />
-            <SchoolCard icon={Cloud} color="text-cyan-600" title="Cloud Engineering" courses={8} />
-            <SchoolCard icon={LineChart} color="text-orange-500" title="Data Analytics" courses={9} />
-            <SchoolCard icon={Bot} color="text-purple-600" title="Artificial Intelligence" courses={7} />
-            <SchoolCard icon={Video} color="text-red-500" title="Media Production" courses={11} />
-            <SchoolCard icon={Megaphone} color="text-yellow-600" title="Digital Marketing" courses={8} />
+            <SchoolCard icon={Layout} color="text-pink-600 dark:text-pink-400" title="Design" courses={12} />
+            <SchoolCard icon={Code} color="text-blue-600 dark:text-blue-400" title="Programming" courses={15} />
+            <SchoolCard icon={Shield} color="text-green-600 dark:text-green-400" title="Cybersecurity" courses={10} />
+            <SchoolCard icon={Cloud} color="text-cyan-600 dark:text-cyan-400" title="Cloud Engineering" courses={8} />
+            <SchoolCard icon={LineChart} color="text-orange-500 dark:text-orange-400" title="Data Analytics" courses={9} />
+            <SchoolCard icon={Bot} color="text-purple-600 dark:text-purple-400" title="Artificial Intelligence" courses={7} />
+            <SchoolCard icon={Video} color="text-red-500 dark:text-red-400" title="Media Production" courses={11} />
+            <SchoolCard icon={Megaphone} color="text-yellow-600 dark:text-yellow-400" title="Digital Marketing" courses={8} />
           </div>
         </div>
       </section>
 
       {/* Popular Courses & Learning Path Preview */}
-      <section className="py-16 bg-gray-50 border-t border-gray-100">
+      <section className="py-16 bg-gray-50 dark:bg-gray-900/30 border-t border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
@@ -130,7 +130,7 @@ export default function AcademyLandingPage() {
               <div className="flex items-center justify-between mb-8">
                 <div>
                   <h2 className="text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-1">POPULAR COURSES</h2>
-                  <p className="text-gray-900 font-bold">Most loved by our students</p>
+                  <p className="text-gray-900 dark:text-gray-200 font-bold">Most loved by our students</p>
                 </div>
                 <Link href="/my-courses" className="text-[#0052FF] font-bold flex items-center gap-1 text-xs hover:gap-2 transition-all">
                   View all <ArrowRight className="w-3 h-3" />
@@ -153,12 +153,12 @@ export default function AcademyLandingPage() {
             {/* Right: Learning Path Preview */}
             <div className="lg:col-span-2">
                <h2 className="text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-1">LEARNING PATH PREVIEW</h2>
-               <h3 className="text-2xl font-bold text-[#000d26] mb-8">UI/UX Design Career Path</h3>
+               <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-8">UI/UX Design Career Path</h3>
 
-               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row gap-12">
+               <div className="bg-white dark:bg-[#0a1128] rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm flex flex-col md:flex-row gap-12">
                  {/* Timeline */}
                  <div className="flex-1 relative">
-                   <div className="absolute left-[19px] top-4 bottom-12 w-px border-l-2 border-dashed border-gray-200" />
+                   <div className="absolute left-[19px] top-4 bottom-12 w-px border-l-2 border-dashed border-gray-200 dark:border-gray-800" />
                    
                    <div className="space-y-8">
                      <TimelineStep number={1} title="Introduction to Design" desc="Learn the basics of design principles." active />
@@ -175,16 +175,16 @@ export default function AcademyLandingPage() {
 
                  {/* Path Summary Card */}
                  <div className="w-full md:w-64 flex-shrink-0">
-                   <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 text-center">
-                     <p className="text-xs text-gray-500 font-bold mb-1">Become a</p>
-                     <h4 className="font-bold text-[#000d26] text-lg mb-4">UI/UX Designer</h4>
+                   <div className="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-6 border border-gray-100 dark:border-gray-800 text-center">
+                     <p className="text-xs text-gray-500 dark:text-gray-400 font-bold mb-1">Become a</p>
+                     <h4 className="font-bold text-[#000d26] dark:text-white text-lg mb-4">UI/UX Designer</h4>
                      <div className="h-32 w-full bg-[#0052FF]/10 rounded-lg mb-6 flex items-center justify-center text-[#0052FF]">
                        <Layout className="w-12 h-12" />
                      </div>
                      <div className="space-y-3 text-left">
-                       <div className="flex items-center gap-3 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-gray-400"/> 8 Steps</div>
-                       <div className="flex items-center gap-3 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-gray-400"/> 12 Projects</div>
-                       <div className="flex items-center gap-3 text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-gray-400"/> 4-6 Months</div>
+                       <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400"><CheckCircle className="w-4 h-4 text-gray-400"/> 8 Steps</div>
+                       <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400"><CheckCircle className="w-4 h-4 text-gray-400"/> 12 Projects</div>
+                       <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400"><CheckCircle className="w-4 h-4 text-gray-400"/> 4-6 Months</div>
                      </div>
                      <Link href="/register" className="mt-6 block text-[#0052FF] font-bold text-sm hover:underline">
                        Start this path →
@@ -199,53 +199,53 @@ export default function AcademyLandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 border-t border-gray-100">
+      <section className="py-20 border-t border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-           <div className="bg-white rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl border border-gray-100">
+           <div className="bg-white dark:bg-[#000d26] rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl border border-gray-100 dark:border-gray-800">
              
              {/* Left Stats */}
-             <div className="flex-1 p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-gray-100">
+             <div className="flex-1 p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-gray-100 dark:border-gray-800">
                <h2 className="text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-4">WHAT OUR STUDENTS SAY</h2>
-               <p className="text-gray-600 italic text-lg leading-relaxed mb-8">
+               <p className="text-gray-600 dark:text-gray-400 italic text-lg leading-relaxed mb-8">
                  "Chosen Visuals changed my life! The instructors are amazing and the hands-on projects helped me secure a job as a UI designer."
                </p>
                <div className="flex items-center gap-4 mb-12">
-                 <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                 <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
                    <Image src="/logo.png" alt="Student" width={48} height={48} className="object-cover" />
                  </div>
                  <div>
-                   <p className="font-bold text-[#000d26]">Mercy Jonathan</p>
-                   <p className="text-sm text-gray-500">UI/UX Designer at Paystack</p>
+                   <p className="font-bold text-[#000d26] dark:text-white">Mercy Jonathan</p>
+                   <p className="text-sm text-gray-500 dark:text-gray-400">UI/UX Designer at Paystack</p>
                  </div>
                </div>
 
-               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-100">
+               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-100 dark:border-gray-800">
                  <div>
-                   <p className="text-3xl font-bold text-[#000d26]">10K+</p>
-                   <p className="text-xs text-gray-500 font-medium mt-1">Students Empowered</p>
+                   <p className="text-3xl font-bold text-[#000d26] dark:text-white">10K+</p>
+                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-1">Students Empowered</p>
                  </div>
                  <div>
-                   <p className="text-3xl font-bold text-[#000d26]">500+</p>
-                   <p className="text-xs text-gray-500 font-medium mt-1">Projects Completed</p>
+                   <p className="text-3xl font-bold text-[#000d26] dark:text-white">500+</p>
+                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-1">Projects Completed</p>
                  </div>
                  <div>
-                   <p className="text-3xl font-bold text-[#000d26]">20+</p>
-                   <p className="text-xs text-gray-500 font-medium mt-1">Expert Instructors</p>
+                   <p className="text-3xl font-bold text-[#000d26] dark:text-white">20+</p>
+                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-1">Expert Instructors</p>
                  </div>
                </div>
              </div>
 
              {/* Right CTA */}
-             <div className="w-full lg:w-[450px] bg-gray-50 p-12 lg:p-16 flex flex-col justify-center">
-               <h3 className="text-2xl font-bold text-[#000d26] mb-4">Ready to start your journey?</h3>
-               <p className="text-gray-500 mb-8 leading-relaxed">
+             <div className="w-full lg:w-[450px] bg-gray-50 dark:bg-[#0a1128] p-12 lg:p-16 flex flex-col justify-center">
+               <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-4">Ready to start your journey?</h3>
+               <p className="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
                  Join thousands of students building successful careers in tech and creative industry.
                </p>
                <div className="flex flex-col sm:flex-row gap-4">
                  <Link href="/register" className="flex-1 bg-[#0052FF] text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-blue-700 transition">
                    Apply Now →
                  </Link>
-                 <button className="flex-1 bg-white border border-gray-200 text-[#000d26] font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-50 transition">
+                 <button className="flex-1 bg-white dark:bg-[#000d26] border border-gray-200 dark:border-gray-800 text-[#000d26] dark:text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-50 dark:hover:bg-gray-800 transition">
                    Speak to Advisor
                  </button>
                </div>
@@ -262,17 +262,17 @@ export default function AcademyLandingPage() {
 
 function PathCard({ icon: Icon, color, bgColor, title, steps }: any) {
   return (
-    <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group cursor-pointer flex flex-col">
+    <div className="bg-white dark:bg-[#0a1128] p-6 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all group cursor-pointer flex flex-col">
       <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bgColor} ${color} mb-6 group-hover:scale-110 transition-transform`}>
         <Icon className="w-6 h-6" />
       </div>
-      <p className="text-xs text-gray-500 font-semibold mb-1">Become a</p>
-      <h3 className="font-bold text-[#000d26] text-lg mb-6">{title}</h3>
+      <p className="text-xs text-gray-500 dark:text-gray-400 font-semibold mb-1">Become a</p>
+      <h3 className="font-bold text-[#000d26] dark:text-white text-lg mb-6">{title}</h3>
       
       <div className="mt-auto">
-        <p className="text-xs text-gray-500 mb-2">{steps} Steps</p>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">{steps} Steps</p>
         <div className="flex items-center gap-1">
-          {[1,2,3,4].map(i => <div key={i} className={`h-1.5 flex-1 rounded-full ${i===1 ? bgColor.replace('100', '500') : 'bg-gray-100'}`} />)}
+          {[1,2,3,4].map(i => <div key={i} className={`h-1.5 flex-1 rounded-full ${i===1 ? bgColor.replace('100', '500').replace('900/30', '500') : 'bg-gray-100 dark:bg-gray-800'}`} />)}
           <ArrowRight className={`w-4 h-4 ml-2 ${color}`} />
         </div>
       </div>
@@ -282,25 +282,25 @@ function PathCard({ icon: Icon, color, bgColor, title, steps }: any) {
 
 function SchoolCard({ icon: Icon, color, title, courses }: any) {
   return (
-    <div className="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white transition cursor-pointer border border-transparent hover:border-gray-100 hover:shadow-md group">
-      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center bg-gray-50 mb-4 shadow-sm border border-gray-100 ${color} group-hover:bg-white transition-colors`}>
+    <div className="flex flex-col items-center text-center p-4 rounded-2xl hover:bg-white dark:hover:bg-[#000d26] transition cursor-pointer border border-transparent hover:border-gray-100 dark:hover:border-gray-800 hover:shadow-md group">
+      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center bg-gray-50 dark:bg-[#0a1128] mb-4 shadow-sm border border-gray-100 dark:border-gray-800 ${color} group-hover:bg-white dark:group-hover:bg-[#000d26] transition-colors`}>
         <Icon className="w-7 h-7" />
       </div>
-      <p className="font-bold text-[#000d26] text-xs leading-tight mb-1">School of <br/>{title}</p>
-      <p className="text-[10px] text-gray-500 font-medium">{courses} Courses →</p>
+      <p className="font-bold text-[#000d26] dark:text-white text-xs leading-tight mb-1">School of <br/>{title}</p>
+      <p className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">{courses} Courses →</p>
     </div>
   );
 }
 
 function CourseListItem({ title, level, hours, rating, reviews, image }: any) {
   return (
-    <div className="flex gap-4 p-3 rounded-xl hover:bg-white transition cursor-pointer group border border-transparent hover:border-gray-200 hover:shadow-sm">
-      <div className="w-24 h-16 rounded-lg bg-gray-200 relative overflow-hidden flex-shrink-0">
+    <div className="flex gap-4 p-3 rounded-xl hover:bg-white dark:hover:bg-[#000d26] transition cursor-pointer group border border-transparent hover:border-gray-200 dark:hover:border-gray-800 hover:shadow-sm">
+      <div className="w-24 h-16 rounded-lg bg-gray-200 dark:bg-gray-800 relative overflow-hidden flex-shrink-0">
         <Image src={image} alt={title} fill className="object-cover group-hover:scale-105 transition" />
       </div>
       <div className="flex-1 min-w-0 flex flex-col justify-center">
-        <h4 className="font-bold text-[#000d26] text-sm truncate mb-1">{title}</h4>
-        <div className="flex items-center gap-3 text-xs text-gray-500">
+        <h4 className="font-bold text-[#000d26] dark:text-white text-sm truncate mb-1">{title}</h4>
+        <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
           <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded text-[10px] font-bold">{level}</span>
           <span>{hours} Hours</span>
         </div>
@@ -315,13 +315,13 @@ function TimelineStep({ number, title, desc, active }: any) {
       <div className={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 flex-shrink-0 ${
         active 
         ? 'bg-[#0052FF]/10 border-[#0052FF] text-[#0052FF]' 
-        : 'bg-white border-gray-200 text-gray-400'
+        : 'bg-white dark:bg-[#0a1128] border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-500'
       }`}>
         {active ? <CheckCircle className="w-5 h-5" /> : number}
       </div>
       <div className="pt-1 flex-1">
-        <h4 className="font-bold text-[#000d26] text-sm">{number}. {title}</h4>
-        <p className="text-xs text-gray-500 mt-1">{desc}</p>
+        <h4 className="font-bold text-[#000d26] dark:text-white text-sm">{number}. {title}</h4>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{desc}</p>
       </div>
     </div>
   );

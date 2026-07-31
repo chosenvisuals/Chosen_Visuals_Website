@@ -8,7 +8,7 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#000d26] transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-16 lg:pt-24 lg:pb-20">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
@@ -20,11 +20,11 @@ export default function HomePage() {
                 <div className="w-2 h-2 rounded-full bg-[#0052FF]" />
                 WELCOME TO CHOSEN VISUALS
               </div>
-              <h1 className="text-5xl lg:text-7xl font-bold text-[#000d26] leading-tight mb-6 tracking-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold text-[#000d26] dark:text-white leading-tight mb-6 tracking-tight">
                 Empowering <span className="text-[#F8A328]">Creatives</span> <br/>
                 & Building Brands
               </h1>
-              <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
+              <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed max-w-lg">
                 We are a dual-force Creative Institute and Agency. Whether you want to learn future-ready tech skills or elevate your brand with world-class design, you belong here.
               </p>
               
@@ -32,7 +32,7 @@ export default function HomePage() {
                 <Link href="/academy" className="bg-[#0052FF] text-white font-bold py-3.5 px-8 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition">
                   Explore Academy <GraduationCap className="w-4 h-4" />
                 </Link>
-                <Link href="/services" className="bg-white border-2 border-gray-200 text-[#000d26] font-bold py-3.5 px-8 rounded-lg flex items-center gap-2 hover:bg-gray-50 transition">
+                <Link href="/services" className="bg-white dark:bg-[#0a1128] border-2 border-gray-200 dark:border-gray-800 text-[#000d26] dark:text-white font-bold py-3.5 px-8 rounded-lg flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition">
                   Hire Our Agency <Briefcase className="w-4 h-4" />
                 </Link>
               </div>
@@ -54,16 +54,16 @@ export default function HomePage() {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-12 bg-white border-y border-gray-100">
+      <section className="py-12 bg-white dark:bg-[#000d26] border-y border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl text-center">
-          <p className="text-gray-400 font-bold text-xs tracking-widest uppercase mb-8">TRUSTED BY & EMPOWERING</p>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 text-gray-300 font-bold text-lg md:text-xl">
-             <span className="hover:text-[#0052FF] transition-colors cursor-default">Businesses & Startups</span>
-             <span className="hover:text-[#F8A328] transition-colors cursor-default">Entrepreneurs</span>
-             <span className="hover:text-[#0052FF] transition-colors cursor-default">Churches & NGOs</span>
-             <span className="hover:text-[#F8A328] transition-colors cursor-default">Government Institutions</span>
-             <span className="hover:text-[#0052FF] transition-colors cursor-default">Schools</span>
-             <span className="hover:text-[#F8A328] transition-colors cursor-default">Content Creators</span>
+          <p className="text-gray-400 dark:text-gray-600 font-bold text-xs tracking-widest uppercase mb-8">TRUSTED BY & EMPOWERING</p>
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 text-gray-300 dark:text-gray-800 font-bold text-lg md:text-xl">
+             <span className="hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors cursor-default">Businesses & Startups</span>
+             <span className="hover:text-[#F8A328] dark:hover:text-[#F8A328] transition-colors cursor-default">Entrepreneurs</span>
+             <span className="hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors cursor-default">Churches & NGOs</span>
+             <span className="hover:text-[#F8A328] dark:hover:text-[#F8A328] transition-colors cursor-default">Government Institutions</span>
+             <span className="hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors cursor-default">Schools</span>
+             <span className="hover:text-[#F8A328] dark:hover:text-[#F8A328] transition-colors cursor-default">Content Creators</span>
           </div>
         </div>
       </section>
@@ -135,11 +135,11 @@ export default function HomePage() {
       </section>
 
       {/* Comprehensive Services */}
-      <section className="py-24 bg-white border-b border-gray-100">
+      <section className="py-24 bg-white dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
             <p className="text-[#F8A328] font-bold text-xs tracking-widest uppercase mb-2">OUR CREATIVE SERVICES</p>
-            <h2 className="text-4xl font-bold text-[#000d26]">World-Class Solutions For Your Brand</h2>
+            <h2 className="text-4xl font-bold text-[#000d26] dark:text-white">World-Class Solutions For Your Brand</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -168,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* Visuals Talk & Impact */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-gray-50 dark:bg-[#0a1128]">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
@@ -176,16 +176,16 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0052FF]/10 text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-6">
                 <Mic className="w-4 h-4" /> Visuals Talk Community
               </div>
-              <h2 className="text-4xl font-bold text-[#000d26] mb-6">Educate. Connect. Inspire.</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <h2 className="text-4xl font-bold text-[#000d26] dark:text-white mb-6">Educate. Connect. Inspire.</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 Visuals Talk is our flagship community program hosting conferences, workshops, networking events, portfolio reviews, and leadership discussions to empower creatives and tech professionals.
               </p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-sm text-gray-700 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Promote Education & Social Awareness</li>
-                <li className="flex items-center gap-3 text-sm text-gray-700 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Support Community Development</li>
-                <li className="flex items-center gap-3 text-sm text-gray-700 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Empower Young Creatives</li>
+                <li className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Promote Education & Social Awareness</li>
+                <li className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Support Community Development</li>
+                <li className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 font-bold"><CheckCircle className="w-5 h-5 text-[#F8A328]" /> Empower Young Creatives</li>
               </ul>
-              <Link href="/visuals-talk" className="inline-block bg-[#000d26] text-white font-bold py-3.5 px-8 rounded-lg hover:bg-gray-800 transition">
+              <Link href="/visuals-talk" className="inline-block bg-[#000d26] dark:bg-white text-white dark:text-[#000d26] font-bold py-3.5 px-8 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition">
                 Join The Community &rarr;
               </Link>
             </div>
@@ -237,14 +237,14 @@ export default function HomePage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="py-12 border-b border-gray-100 bg-gray-50/50">
+      <section className="py-12 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 divide-x divide-gray-200">
-             <StatItem icon={Users} count="10K+" label="Students Trained" color="text-blue-600" bg="bg-blue-100" />
-             <StatItem icon={Briefcase} count="500+" label="Client Projects" color="text-purple-600" bg="bg-purple-100" />
-             <StatItem icon={GraduationCap} count="8" label="Schools" color="text-pink-600" bg="bg-pink-100" />
-             <StatItem icon={Globe} count="30+" label="Countries Reached" color="text-cyan-600" bg="bg-cyan-100" />
-             <StatItem icon={Award} count="5+" label="Years of Impact" color="text-orange-600" bg="bg-orange-100" />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 divide-x divide-gray-200 dark:divide-gray-800">
+             <StatItem icon={Users} count="10K+" label="Students Trained" color="text-blue-600 dark:text-blue-400" bg="bg-blue-100 dark:bg-blue-900/30" />
+             <StatItem icon={Briefcase} count="500+" label="Client Projects" color="text-purple-600 dark:text-purple-400" bg="bg-purple-100 dark:bg-purple-900/30" />
+             <StatItem icon={GraduationCap} count="8" label="Schools" color="text-pink-600 dark:text-pink-400" bg="bg-pink-100 dark:bg-pink-900/30" />
+             <StatItem icon={Globe} count="30+" label="Countries Reached" color="text-cyan-600 dark:text-cyan-400" bg="bg-cyan-100 dark:bg-cyan-900/30" />
+             <StatItem icon={Award} count="5+" label="Years of Impact" color="text-orange-600 dark:text-orange-400" bg="bg-orange-100 dark:bg-orange-900/30" />
           </div>
         </div>
       </section>
@@ -267,10 +267,10 @@ export default function HomePage() {
             {/* Right Content */}
             <div>
               <p className="text-[#F8A328] font-bold text-xs tracking-widest uppercase mb-4">OUR STORY</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#000d26] leading-tight mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000d26] dark:text-white leading-tight mb-6">
                 A Vision Born From Passion Driven by <span className="text-[#F8A328]">Purpose</span>
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed mb-16">
+              <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed mb-16">
                 <p>
                   Chosen Visuals was founded with a simple belief: talent is everywhere, but opportunity is not. We exist to bridge that gap by providing world-class training and creative services that help people and brands grow.
                 </p>
@@ -281,7 +281,7 @@ export default function HomePage() {
 
               {/* Timeline */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
-                <div className="hidden md:block absolute top-6 left-6 right-6 h-px border-t-2 border-dashed border-gray-200" />
+                <div className="hidden md:block absolute top-6 left-6 right-6 h-px border-t-2 border-dashed border-gray-200 dark:border-gray-800" />
                 <TimelineNode year="2019" title="The Beginning" desc="Started as a creative studio." icon={Target} />
                 <TimelineNode year="2021" title="Growth" desc="Launched training programs." icon={Rocket} />
                 <TimelineNode year="2022" title="Expansion" desc="Serviced bigger brands." icon={Globe} />
@@ -295,26 +295,26 @@ export default function HomePage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100">
+      <section className="py-24 bg-gray-50 dark:bg-[#0a1128] border-t border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mb-16">
             <p className="text-[#0052FF] font-bold text-xs tracking-widest uppercase mb-2">OUR VALUES</p>
-            <h2 className="text-4xl font-bold text-[#000d26]">The Principles That Guide Us</h2>
+            <h2 className="text-4xl font-bold text-[#000d26] dark:text-white">The Principles That Guide Us</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ValueCard icon={Target} title="Excellence" desc="We pursue the highest standards in everything we do." color="text-blue-600" bg="bg-blue-100" />
-            <ValueCard icon={Lightbulb} title="Creativity" desc="We turn ideas into inspiring and impactful experiences." color="text-orange-500" bg="bg-orange-100" />
-            <ValueCard icon={ShieldCheck} title="Integrity" desc="We are honest, transparent, and accountable." color="text-green-600" bg="bg-green-100" />
-            <ValueCard icon={Rocket} title="Innovation" desc="We embrace technology and new ideas to stay ahead." color="text-purple-600" bg="bg-purple-100" />
-            <ValueCard icon={Heart} title="Impact" desc="We create solutions that transform lives and communities." color="text-red-500" bg="bg-red-100" />
-            <ValueCard icon={Users} title="Community" desc="We grow together and support each other's success." color="text-cyan-600" bg="bg-cyan-100" />
+            <ValueCard icon={Target} title="Excellence" desc="We pursue the highest standards in everything we do." color="text-blue-600 dark:text-blue-400" bg="bg-blue-100 dark:bg-blue-900/30" />
+            <ValueCard icon={Lightbulb} title="Creativity" desc="We turn ideas into inspiring and impactful experiences." color="text-orange-500 dark:text-orange-400" bg="bg-orange-100 dark:bg-orange-900/30" />
+            <ValueCard icon={ShieldCheck} title="Integrity" desc="We are honest, transparent, and accountable." color="text-green-600 dark:text-green-400" bg="bg-green-100 dark:bg-green-900/30" />
+            <ValueCard icon={Rocket} title="Innovation" desc="We embrace technology and new ideas to stay ahead." color="text-purple-600 dark:text-purple-400" bg="bg-purple-100 dark:bg-purple-900/30" />
+            <ValueCard icon={Heart} title="Impact" desc="We create solutions that transform lives and communities." color="text-red-500 dark:text-red-400" bg="bg-red-100 dark:bg-red-900/30" />
+            <ValueCard icon={Users} title="Community" desc="We grow together and support each other's success." color="text-cyan-600 dark:text-cyan-400" bg="bg-cyan-100 dark:bg-cyan-900/30" />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white border-t border-gray-100">
+      <section className="py-20 bg-white dark:bg-[#000d26] border-t border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="bg-[#000d26] rounded-3xl p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 shadow-xl border border-gray-800">
             
@@ -359,12 +359,12 @@ export default function HomePage() {
 
 function ServiceCard({ icon: Icon, title, desc }: any) {
   return (
-    <div className="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all group">
-      <div className="w-14 h-14 rounded-2xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-[#000d26] mb-6 group-hover:-translate-y-2 transition-transform">
+    <div className="p-8 rounded-3xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-all group">
+      <div className="w-14 h-14 rounded-2xl bg-white dark:bg-[#0a1128] border border-gray-200 dark:border-gray-700 shadow-sm flex items-center justify-center text-[#000d26] dark:text-white mb-6 group-hover:-translate-y-2 transition-transform">
         <Icon className="w-6 h-6" />
       </div>
-      <h3 className="font-bold text-xl text-[#000d26] mb-3">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
+      <h3 className="font-bold text-xl text-[#000d26] dark:text-white mb-3">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{desc}</p>
     </div>
   );
 }
@@ -375,8 +375,8 @@ function StatItem({ icon: Icon, count, label, color, bg }: any) {
       <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${bg} ${color}`}>
         <Icon className="w-6 h-6" />
       </div>
-      <p className="text-3xl font-bold text-[#000d26] mb-1">{count}</p>
-      <p className="text-xs text-gray-500 font-medium">{label}</p>
+      <p className="text-3xl font-bold text-[#000d26] dark:text-white mb-1">{count}</p>
+      <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{label}</p>
     </div>
   );
 }
@@ -384,13 +384,13 @@ function StatItem({ icon: Icon, count, label, color, bg }: any) {
 function TimelineNode({ year, title, desc, icon: Icon }: any) {
   return (
     <div className="relative pt-12">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-white border-2 border-gray-100 shadow-sm flex items-center justify-center text-[#0052FF] z-10">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 rounded-xl bg-white dark:bg-[#000d26] border-2 border-gray-100 dark:border-gray-800 shadow-sm flex items-center justify-center text-[#0052FF] z-10">
         <Icon className="w-5 h-5" />
       </div>
       <div className="text-center">
         <p className="text-[#0052FF] font-bold text-sm mb-1">{year}</p>
-        <h4 className="font-bold text-[#000d26] text-sm mb-2">{title}</h4>
-        <p className="text-[11px] text-gray-500 leading-relaxed px-1">{desc}</p>
+        <h4 className="font-bold text-[#000d26] dark:text-white text-sm mb-2">{title}</h4>
+        <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed px-1">{desc}</p>
       </div>
     </div>
   );
@@ -398,12 +398,12 @@ function TimelineNode({ year, title, desc, icon: Icon }: any) {
 
 function ValueCard({ icon: Icon, title, desc, color, bg }: any) {
   return (
-    <div className="bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-shadow group">
+    <div className="bg-white dark:bg-[#0a1128] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-shadow group">
       <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${bg} ${color} group-hover:scale-110 transition-transform`}>
         <Icon className="w-7 h-7" />
       </div>
-      <h3 className="text-xl font-bold text-[#000d26] mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm">{desc}</p>
+      <h3 className="text-xl font-bold text-[#000d26] dark:text-white mb-3">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">{desc}</p>
     </div>
   );
 }

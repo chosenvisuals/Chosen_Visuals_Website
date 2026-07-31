@@ -17,7 +17,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white dark:bg-[#000d26] transition-colors duration-300 min-h-screen">
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 bg-[#000d26] text-white overflow-hidden">
@@ -42,15 +42,15 @@ export default function AboutPage() {
               <Image src="https://picsum.photos/seed/chosen6/800/600" alt="Team meeting" fill className="object-cover" />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-[#000d26] mb-6">Our Mission</h2>
-              <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+              <h2 className="text-4xl font-bold text-[#000d26] dark:text-white mb-6">Our Mission</h2>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-lg">
                 Chosen Visuals was founded on a simple premise: great design and technology should be accessible, and the people creating it should be empowered. 
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8 text-lg">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8 text-lg">
                 What started as a small design agency has evolved into a comprehensive creative powerhouse that not only delivers world-class visual solutions for brands but also trains the next generation of creatives through our Academy and community initiatives.
               </p>
-              <div className="bg-gray-50 border-l-4 border-[#0052FF] p-6 rounded-r-2xl">
-                <p className="font-bold text-[#000d26] text-lg italic">
+              <div className="bg-gray-50 dark:bg-[#0a1128] border-l-4 border-[#0052FF] p-6 rounded-r-2xl">
+                <p className="font-bold text-[#000d26] dark:text-white text-lg italic">
                   "Our goal is to build an ecosystem where creativity meets technology, and where passion translates into impact."
                 </p>
               </div>
@@ -60,22 +60,22 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-gray-50 border-y border-gray-100">
+      <section className="py-24 bg-gray-50 dark:bg-[#0a1128] border-y border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000d26]">Our Core Values</h2>
-            <p className="text-gray-500 mt-2 text-lg">The principles that guide everything we do.</p>
+            <h2 className="text-4xl font-bold text-[#000d26] dark:text-white">Our Core Values</h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-2 text-lg">The principles that guide everything we do.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, i) => {
               const Icon = value.icon;
               return (
-                <div key={i} className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-shadow text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#0052FF] flex items-center justify-center mx-auto mb-6 border border-blue-100">
+                <div key={i} className="bg-white dark:bg-[#000d26] p-8 rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-shadow text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-900/30 text-[#0052FF] dark:text-blue-400 flex items-center justify-center mx-auto mb-6 border border-blue-100 dark:border-blue-900/50">
                     <Icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#000d26] mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.desc}</p>
+                  <h3 className="text-xl font-bold text-[#000d26] dark:text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{value.desc}</p>
                 </div>
               );
             })}
@@ -84,11 +84,11 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#000d26]">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000d26]">Meet The Leadership</h2>
-            <p className="text-gray-500 mt-2 text-lg">The visionaries driving Chosen Visuals forward.</p>
+            <h2 className="text-4xl font-bold text-[#000d26] dark:text-white">Meet The Leadership</h2>
+            <p className="text-gray-500 dark:text-gray-400 mt-2 text-lg">The visionaries driving Chosen Visuals forward.</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -97,8 +97,8 @@ export default function AboutPage() {
                 <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden mb-6 shadow-sm group-hover:shadow-xl transition-all duration-300">
                   <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <h3 className="text-xl font-bold text-[#000d26]">{member.name}</h3>
-                <p className="text-[#0052FF] font-medium mt-1 text-sm">{member.role}</p>
+                <h3 className="text-xl font-bold text-[#000d26] dark:text-white">{member.name}</h3>
+                <p className="text-[#0052FF] dark:text-blue-400 font-medium mt-1 text-sm">{member.role}</p>
               </div>
             ))}
           </div>

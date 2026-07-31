@@ -30,7 +30,7 @@ export default function PortfolioPage() {
   const clients = ["Spotify", "Paystack", "MTN", "Flutterwave", "Netflix", "Guaranty Trust"];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#000d26] transition-colors duration-300 min-h-screen">
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#000d26] text-white text-center">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
@@ -43,46 +43,46 @@ export default function PortfolioPage() {
       </section>
 
       {/* Client Marquee */}
-      <section className="py-12 bg-white border-b border-gray-100 overflow-hidden">
+      <section className="py-12 bg-white dark:bg-[#0a1128] border-b border-gray-100 dark:border-gray-800 overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Trusted By Industry Leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             {clients.map((client, idx) => (
-              <h3 key={idx} className="text-2xl font-black text-[#000d26] tracking-tighter">{client}</h3>
+              <h3 key={idx} className="text-2xl font-black text-[#000d26] dark:text-white tracking-tighter">{client}</h3>
             ))}
           </div>
         </div>
       </section>
 
       {/* Featured Case Study */}
-      <section className="py-24 bg-gray-50 border-b border-gray-100">
+      <section className="py-24 bg-gray-50 dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
               <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image src="https://picsum.photos/seed/chosen32/800/600" alt="Featured Case Study" fill className="object-cover" />
-                <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full font-bold text-sm text-[#000d26]">Featured Case Study</div>
+                <div className="absolute top-6 left-6 bg-white/90 dark:bg-[#000d26]/90 backdrop-blur-sm px-4 py-2 rounded-full font-bold text-sm text-[#000d26] dark:text-white">Featured Case Study</div>
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl font-bold text-[#000d26] mb-4">AfroNation Concert Visuals</h2>
+              <h2 className="text-4xl font-bold text-[#000d26] dark:text-white mb-4">AfroNation Concert Visuals</h2>
               <p className="text-[#0052FF] font-bold mb-6 text-sm tracking-widest uppercase">Stage Design & Media Coverage</p>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                 For the AfroNation 2026 tour, Chosen Visuals was tasked with designing a massive LED stage setup that would respond dynamically to the artists' performances. We built custom 3D animations and operated the live visuals.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 border-y border-gray-200 py-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 border-y border-gray-200 dark:border-gray-800 py-6">
                 <div>
-                  <h4 className="text-3xl font-black text-[#000d26]">50k+</h4>
+                  <h4 className="text-3xl font-black text-[#000d26] dark:text-white">50k+</h4>
                   <p className="text-sm font-bold text-gray-500 uppercase">Live Attendees</p>
                 </div>
                 <div>
-                  <h4 className="text-3xl font-black text-[#000d26]">2.5M</h4>
+                  <h4 className="text-3xl font-black text-[#000d26] dark:text-white">2.5M</h4>
                   <p className="text-sm font-bold text-gray-500 uppercase">Stream Views</p>
                 </div>
               </div>
 
-              <Link href="/contact" className="inline-flex bg-[#000d26] text-white font-bold py-4 px-8 rounded-xl hover:bg-gray-800 transition shadow-lg items-center gap-2">
+              <Link href="/contact" className="inline-flex bg-[#000d26] dark:bg-white text-white dark:text-[#000d26] font-bold py-4 px-8 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-200 transition shadow-lg items-center gap-2">
                 Start a Similar Project <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
               <button 
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2 rounded-full font-bold text-sm transition ${activeFilter === filter ? 'bg-[#000d26] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                className={`px-6 py-2 rounded-full font-bold text-sm transition ${activeFilter === filter ? 'bg-[#000d26] dark:bg-white text-white dark:text-[#000d26]' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
               >
                 {filter}
               </button>

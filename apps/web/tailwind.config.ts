@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 // Official Chosen Visuals brand palette, confirmed from the brand guide PDF.
 // Every component reads from these tokens, so the whole site re-themes from this one file.
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",

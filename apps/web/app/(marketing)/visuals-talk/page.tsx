@@ -17,7 +17,7 @@ export default function VisualsTalkPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#000d26] transition-colors duration-300 min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 bg-[#000d26] text-white text-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -42,57 +42,57 @@ export default function VisualsTalkPage() {
       </section>
 
       {/* Highlights / About the Initiative */}
-      <section className="py-24 bg-gray-50 border-b border-gray-100">
+      <section className="py-24 bg-gray-50 dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-sm text-center">
-              <div className="w-16 h-16 bg-blue-50 text-[#0052FF] rounded-2xl flex items-center justify-center mx-auto mb-6"><Mic className="w-8 h-8" /></div>
-              <h3 className="text-2xl font-bold text-[#000d26] mb-3">Conferences</h3>
-              <p className="text-gray-500 leading-relaxed">Large-scale events featuring industry leaders sharing insights on design, tech, and business.</p>
+            <div className="bg-white dark:bg-[#0a1128] p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm text-center">
+              <div className="w-16 h-16 bg-blue-50 dark:bg-blue-900/30 text-[#0052FF] dark:text-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6"><Mic className="w-8 h-8" /></div>
+              <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-3">Conferences</h3>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Large-scale events featuring industry leaders sharing insights on design, tech, and business.</p>
             </div>
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-sm text-center">
-              <div className="w-16 h-16 bg-orange-50 text-[#F8A328] rounded-2xl flex items-center justify-center mx-auto mb-6"><Users className="w-8 h-8" /></div>
-              <h3 className="text-2xl font-bold text-[#000d26] mb-3">Networking</h3>
-              <p className="text-gray-500 leading-relaxed">Connect with like-minded creatives, find collaborators, and build meaningful professional relationships.</p>
+            <div className="bg-white dark:bg-[#0a1128] p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm text-center">
+              <div className="w-16 h-16 bg-orange-50 dark:bg-orange-900/30 text-[#F8A328] dark:text-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6"><Users className="w-8 h-8" /></div>
+              <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-3">Networking</h3>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Connect with like-minded creatives, find collaborators, and build meaningful professional relationships.</p>
             </div>
-            <div className="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-sm text-center">
-              <div className="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"><PlusCircle className="w-8 h-8" /></div>
-              <h3 className="text-2xl font-bold text-[#000d26] mb-3">Mentorship</h3>
-              <p className="text-gray-500 leading-relaxed">Get paired with experienced professionals who can guide you through the complexities of the creative industry.</p>
+            <div className="bg-white dark:bg-[#0a1128] p-10 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm text-center">
+              <div className="w-16 h-16 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-6"><PlusCircle className="w-8 h-8" /></div>
+              <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-3">Mentorship</h3>
+              <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Get paired with experienced professionals who can guide you through the complexities of the creative industry.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Upcoming Events */}
-      <section id="upcoming" className="py-24 bg-white">
+      <section id="upcoming" className="py-24 bg-white dark:bg-[#000d26]">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div>
-              <h2 className="text-4xl font-bold text-[#000d26] mb-4">Upcoming Events</h2>
-              <p className="text-gray-500 text-lg">Secure your spot. Most of our events are free but seats are limited.</p>
+              <h2 className="text-4xl font-bold text-[#000d26] dark:text-white mb-4">Upcoming Events</h2>
+              <p className="text-gray-500 dark:text-gray-400 text-lg">Secure your spot. Most of our events are free but seats are limited.</p>
             </div>
-            <Link href="#" className="text-[#0052FF] font-bold inline-flex items-center gap-2 hover:underline">
+            <Link href="#" className="text-[#0052FF] dark:text-blue-400 font-bold inline-flex items-center gap-2 hover:underline">
               View Calendar <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {events.map((evt, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-[2rem] overflow-hidden hover:shadow-xl hover:border-[#0052FF] transition-all group flex flex-col">
-                <div className="h-48 bg-gray-100 relative">
+              <div key={i} className="bg-white dark:bg-[#0a1128] border border-gray-200 dark:border-gray-800 rounded-[2rem] overflow-hidden hover:shadow-xl hover:border-[#0052FF] transition-all group flex flex-col">
+                <div className="h-48 bg-gray-100 dark:bg-gray-800 relative">
                   <Image src={`https://picsum.photos/seed/chosen47_${i}/800/600`} alt="Event" fill className="object-cover group-hover:scale-105 transition duration-500" />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#000d26]">
+                  <div className="absolute top-4 left-4 bg-white/90 dark:bg-[#000d26]/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#000d26] dark:text-white">
                     {evt.status}
                   </div>
                 </div>
                 <div className="p-8 flex-1 flex flex-col">
-                  <div className="flex items-center justify-between text-sm text-gray-500 font-medium mb-4">
-                    <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-[#F8A328]" /> {evt.date}</span>
-                    <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-[#0052FF]" /> {evt.type}</span>
+                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 font-medium mb-4">
+                    <span className="flex items-center gap-1"><Calendar className="w-4 h-4 text-[#F8A328] dark:text-orange-400" /> {evt.date}</span>
+                    <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-[#0052FF] dark:text-blue-400" /> {evt.type}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#000d26] mb-6">{evt.title}</h3>
-                  <Link href="#" className="mt-auto w-full bg-gray-100 text-[#000d26] font-bold py-3 rounded-xl hover:bg-[#0052FF] hover:text-white transition-colors flex items-center justify-center gap-2">
+                  <h3 className="text-2xl font-bold text-[#000d26] dark:text-white mb-6">{evt.title}</h3>
+                  <Link href="#" className="mt-auto w-full bg-gray-100 dark:bg-gray-800 text-[#000d26] dark:text-white font-bold py-3 rounded-xl hover:bg-[#0052FF] hover:text-white transition-colors flex items-center justify-center gap-2">
                     RSVP Now <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -125,14 +125,14 @@ export default function VisualsTalkPage() {
       </section>
 
       {/* Join Community CTA */}
-      <section id="community" className="py-24 bg-gray-50 border-t border-gray-100 text-center">
+      <section id="community" className="py-24 bg-gray-50 dark:bg-[#000d26] border-t border-gray-100 dark:border-gray-800 text-center">
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
-          <h2 className="text-4xl font-bold text-[#000d26] mb-6">Join the Community</h2>
-          <p className="text-gray-500 text-lg mb-10 leading-relaxed">
+          <h2 className="text-4xl font-bold text-[#000d26] dark:text-white mb-6">Join the Community</h2>
+          <p className="text-gray-500 dark:text-gray-400 text-lg mb-10 leading-relaxed">
             Don't miss out on the latest events, resources, and networking opportunities. Join thousands of creatives in the Visuals Talk ecosystem today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
-            <input type="email" placeholder="Enter your email address" className="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF] transition-all text-gray-900" />
+            <input type="email" placeholder="Enter your email address" className="w-full bg-white dark:bg-[#0a1128] border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#0052FF]/20 focus:border-[#0052FF] transition-all text-gray-900 dark:text-white" />
             <button className="w-full sm:w-auto bg-[#0052FF] text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-600 transition whitespace-nowrap shadow-lg">
               Subscribe
             </button>
