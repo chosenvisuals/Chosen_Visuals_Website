@@ -59,7 +59,7 @@ export function Navbar() {
           </div>
           
           {/* Center: Navigation Links */}
-          <nav className="hidden lg:flex gap-5 xl:gap-8 text-sm xl:text-[15px] font-semibold text-[#000d26] dark:text-gray-200 flex-shrink-0">
+          <nav className="hidden xl:flex gap-4 2xl:gap-8 text-sm xl:text-[15px] font-semibold text-[#000d26] dark:text-gray-200 flex-shrink-0">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#0052FF] hover:after:w-full after:transition-all after:duration-300">
                 {link.label}
@@ -93,7 +93,7 @@ export function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button 
-              className="lg:hidden text-[#000d26] dark:text-gray-200 p-2 -mr-2"
+              className="xl:hidden text-[#000d26] dark:text-gray-200 p-2 -mr-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -104,7 +104,7 @@ export function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-white dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800 shadow-lg flex flex-col py-4 px-6 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="xl:hidden absolute top-full left-0 w-full bg-white dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800 shadow-lg flex flex-col py-4 px-6 max-h-[calc(100vh-80px)] overflow-y-auto">
             <nav className="flex flex-col gap-4 text-base font-semibold text-[#000d26] dark:text-gray-200">
               {links.map((link) => (
                 <Link 
