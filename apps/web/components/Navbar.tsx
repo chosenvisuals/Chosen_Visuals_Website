@@ -48,18 +48,18 @@ export function Navbar() {
   return (
     <>
       <header className="border-b border-gray-100 dark:border-gray-800 bg-white/90 dark:bg-[#000d26]/90 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-colors duration-300">
-        <div className="w-full px-4 lg:px-12 py-3 lg:py-4 flex items-center justify-between">
+        <div className="w-full px-4 lg:px-6 xl:px-12 py-3 lg:py-4 flex items-center justify-between">
           
           {/* Left: Logo */}
           <div className="flex-1 flex justify-start">
             <Link href="/" className="flex items-center group">
-              <Image src="/logo.png" alt="Chosen Visuals" width={260} height={75} priority className="h-10 lg:h-12 xl:h-14 w-auto drop-shadow-sm transition-transform group-hover:scale-105 duration-300 dark:hidden" />
-              <Image src="/white-logo.png" alt="Chosen Visuals" width={260} height={75} priority className="h-10 lg:h-12 xl:h-14 w-auto drop-shadow-sm transition-transform group-hover:scale-105 duration-300 hidden dark:block" />
+              <Image src="/logo.png" alt="Chosen Visuals" width={260} height={75} priority className="h-9 lg:h-9 xl:h-12 2xl:h-14 w-auto drop-shadow-sm transition-transform group-hover:scale-105 duration-300 dark:hidden" />
+              <Image src="/white-logo.png" alt="Chosen Visuals" width={260} height={75} priority className="h-9 lg:h-9 xl:h-12 2xl:h-14 w-auto drop-shadow-sm transition-transform group-hover:scale-105 duration-300 hidden dark:block" />
             </Link>
           </div>
           
           {/* Center: Navigation Links */}
-          <nav className="hidden xl:flex gap-4 2xl:gap-8 text-sm xl:text-[15px] font-semibold text-[#000d26] dark:text-gray-200 flex-shrink-0">
+          <nav className="hidden lg:flex gap-3 lg:gap-3 xl:gap-5 2xl:gap-8 text-xs lg:text-[13px] xl:text-[15px] font-semibold text-[#000d26] dark:text-gray-200 flex-shrink-0">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-[#0052FF] dark:hover:text-[#0052FF] transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#0052FF] hover:after:w-full after:transition-all after:duration-300">
                 {link.label}
@@ -68,32 +68,32 @@ export function Navbar() {
           </nav>
           
           {/* Right: Search, Theme, and CTA */}
-          <div className="flex-1 flex justify-end items-center gap-2 lg:gap-4 xl:gap-6">
+          <div className="flex-1 flex justify-end items-center gap-2 lg:gap-2 xl:gap-6">
             <button 
               onClick={() => setIsSearchOpen(true)}
-              className="text-gray-500 dark:text-gray-400 hover:text-[#000d26] dark:hover:text-white p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              className="text-gray-500 dark:text-gray-400 hover:text-[#000d26] dark:hover:text-white p-1.5 xl:p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-4 h-4 xl:w-5 xl:h-5" />
             </button>
             <button 
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-gray-500 dark:text-gray-400 hover:text-[#000d26] dark:hover:text-white p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              className="text-gray-500 dark:text-gray-400 hover:text-[#000d26] dark:hover:text-white p-1.5 xl:p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
-              {mounted && theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {mounted && theme === "dark" ? <Sun className="w-4 h-4 xl:w-5 xl:h-5" /> : <Moon className="w-4 h-4 xl:w-5 xl:h-5" />}
             </button>
             <div className="w-px h-6 bg-gray-200 dark:bg-gray-700 hidden sm:block ml-1 mr-1 lg:ml-2 lg:mr-2"></div>
             
             <Link
               href="/register"
-              className="hidden sm:flex rounded-full bg-[#0052FF] px-5 py-2 lg:px-6 lg:py-2.5 text-xs lg:text-sm font-medium text-white shadow-sm hover:bg-blue-600 items-center gap-2 transition-transform hover:scale-105"
+              className="hidden sm:flex rounded-full bg-[#0052FF] px-4 py-1.5 lg:px-4 lg:py-2 xl:px-6 xl:py-2.5 text-[11px] lg:text-xs xl:text-sm font-medium text-white shadow-sm hover:bg-blue-600 items-center gap-1.5 xl:gap-2 transition-transform hover:scale-105"
             >
               Apply Now
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" className="xl:w-4 xl:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </Link>
 
             {/* Mobile Menu Toggle */}
             <button 
-              className="xl:hidden text-[#000d26] dark:text-gray-200 p-2 -mr-2"
+              className="lg:hidden text-[#000d26] dark:text-gray-200 p-2 -mr-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -104,7 +104,7 @@ export function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
-          <div className="xl:hidden absolute top-full left-0 w-full bg-white dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800 shadow-lg flex flex-col py-4 px-6 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="lg:hidden absolute top-full left-0 w-full bg-white dark:bg-[#000d26] border-b border-gray-100 dark:border-gray-800 shadow-lg flex flex-col py-4 px-6 max-h-[calc(100vh-80px)] overflow-y-auto">
             <nav className="flex flex-col gap-4 text-base font-semibold text-[#000d26] dark:text-gray-200">
               {links.map((link) => (
                 <Link 

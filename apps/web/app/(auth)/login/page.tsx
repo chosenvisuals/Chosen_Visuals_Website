@@ -35,7 +35,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex h-full w-full bg-white">
+    <div className="flex h-screen w-full bg-white dark:bg-[#000d26]">
       {/* Left Side - Branding (Hidden on Mobile) */}
       <div className="hidden lg:flex lg:w-[45%] p-12 flex-col justify-between relative overflow-hidden">
         {/* The new AI generated image as a background */}
@@ -84,12 +84,12 @@ export default function LoginPage() {
       <div className="w-full lg:w-[55%] flex items-center justify-center p-8 sm:p-12 xl:p-20">
         <div className="w-full max-w-[440px]">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-brand-navy mb-3">Welcome back</h2>
-            <p className="text-gray-500 text-lg">Sign in to continue your learning journey.</p>
+            <h2 className="text-3xl font-bold text-brand-navy dark:text-white mb-3">Welcome back</h2>
+            <p className="text-gray-500 dark:text-gray-400 text-lg">Sign in to continue your learning journey.</p>
           </div>
           
           {error && (
-            <div className="bg-red-50 text-red-600 p-4 rounded-xl mb-6 text-sm flex items-center gap-3">
+            <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-4 rounded-xl mb-6 text-sm flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
               {error}
             </div>
@@ -97,40 +97,40 @@ export default function LoginPage() {
 
           <button
             onClick={handleGoogleLogin}
-            className="w-full flex items-center justify-center gap-3 border-2 border-brand-border py-3.5 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all font-medium text-brand-navy mb-8 text-base shadow-sm"
+            className="w-full flex items-center justify-center gap-3 border-2 border-brand-border dark:border-gray-800 py-3.5 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all font-medium text-brand-navy dark:text-white mb-8 text-base shadow-sm"
           >
             <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
             Continue with Google
           </button>
 
           <div className="flex items-center justify-center space-x-4 mb-8">
-            <div className="h-px bg-brand-border flex-1"></div>
+            <div className="h-px bg-brand-border dark:bg-gray-800 flex-1"></div>
             <span className="text-sm text-gray-400 font-medium px-2">or sign in with email</span>
-            <div className="h-px bg-brand-border flex-1"></div>
+            <div className="h-px bg-brand-border dark:bg-gray-800 flex-1"></div>
           </div>
 
           <form onSubmit={handleEmailLogin} className="space-y-5">
             <div>
-              <label className="block text-sm font-semibold text-brand-navy mb-2">Email Address</label>
+              <label className="block text-sm font-semibold text-brand-navy dark:text-gray-200 mb-2">Email Address</label>
               <input
                 type="email"
                 required
                 placeholder="you@example.com"
-                className="w-full px-4 py-3.5 bg-gray-50 border border-brand-border rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue outline-none transition-all"
+                className="w-full px-4 py-3.5 bg-gray-50 dark:bg-[#021845] border border-brand-border dark:border-gray-800 rounded-xl focus:bg-white dark:focus:bg-[#000d26] focus:ring-2 focus:ring-brand-blue/50 dark:focus:ring-brand-blue/30 outline-none transition-all dark:text-white"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="block text-sm font-semibold text-brand-navy">Password</label>
+                <label className="block text-sm font-semibold text-brand-navy dark:text-gray-200">Password</label>
                 <Link href="/forgot-password" className="text-sm text-brand-blue hover:underline font-medium">Forgot password?</Link>
               </div>
               <input
                 type="password"
                 required
                 placeholder="••••••••"
-                className="w-full px-4 py-3.5 bg-gray-50 border border-brand-border rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue outline-none transition-all"
+                className="w-full px-4 py-3.5 bg-gray-50 dark:bg-[#021845] border border-brand-border dark:border-gray-800 rounded-xl focus:bg-white dark:focus:bg-[#000d26] focus:ring-2 focus:ring-brand-blue/50 dark:focus:ring-brand-blue/30 outline-none transition-all dark:text-white"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -145,7 +145,7 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <p className="text-center text-gray-500 mt-10 text-base">
+          <p className="text-center text-gray-500 dark:text-gray-400 mt-10 text-base">
             Don't have an account? <Link href="/register" className="text-brand-blue font-semibold hover:underline">Sign up for free</Link>
           </p>
         </div>
