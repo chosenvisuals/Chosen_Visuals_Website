@@ -71,7 +71,7 @@ export default function PortfolioPage() {
                 For the AfroNation 2026 tour, Chosen Visuals was tasked with designing a massive LED stage setup that would respond dynamically to the artists' performances. We built custom 3D animations and operated the live visuals.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 mb-8 border-y border-gray-200 py-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 border-y border-gray-200 py-6">
                 <div>
                   <h4 className="text-3xl font-black text-[#000d26]">50k+</h4>
                   <p className="text-sm font-bold text-gray-500 uppercase">Live Attendees</p>

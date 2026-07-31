@@ -187,7 +187,7 @@ export default function RegisterPage() {
               {/* STEP 1 */}
               {step === 1 && (
                 <form onSubmit={handleNextStep} className="space-y-5">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold text-brand-navy mb-2">First Name</label>
                       <input type="text" required placeholder="John" className="w-full px-4 py-3.5 bg-gray-50 border border-brand-border rounded-xl focus:bg-white focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue outline-none transition-all" value={firstName} onChange={(e) => setFirstName(e.target.value)} />

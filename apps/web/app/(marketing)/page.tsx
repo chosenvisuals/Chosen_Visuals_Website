@@ -190,7 +190,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                <div className="space-y-4">
                  <div className="h-48 bg-blue-100 rounded-3xl overflow-hidden relative"><Image src="/images/academy-hero.png" alt="Community" fill className="object-cover" /></div>
                  <div className="h-64 bg-orange-100 rounded-3xl overflow-hidden relative"><Image src="/images/home-hero.png" alt="Workshop" fill className="object-cover" /></div>
@@ -239,7 +239,7 @@ export default function HomePage() {
       {/* Stats Bar */}
       <section className="py-12 border-b border-gray-100 bg-gray-50/50">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 divide-x divide-gray-200">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 divide-x divide-gray-200">
              <StatItem icon={Users} count="10K+" label="Students Trained" color="text-blue-600" bg="bg-blue-100" />
              <StatItem icon={Briefcase} count="500+" label="Client Projects" color="text-purple-600" bg="bg-purple-100" />
              <StatItem icon={GraduationCap} count="8" label="Schools" color="text-pink-600" bg="bg-pink-100" />
@@ -280,8 +280,8 @@ export default function HomePage() {
               </div>
 
               {/* Timeline */}
-              <div className="grid grid-cols-5 gap-4 relative">
-                <div className="absolute top-6 left-6 right-6 h-px border-t-2 border-dashed border-gray-200" />
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
+                <div className="hidden md:block absolute top-6 left-6 right-6 h-px border-t-2 border-dashed border-gray-200" />
                 <TimelineNode year="2019" title="The Beginning" desc="Started as a creative studio." icon={Target} />
                 <TimelineNode year="2021" title="Growth" desc="Launched training programs." icon={Rocket} />
                 <TimelineNode year="2022" title="Expansion" desc="Serviced bigger brands." icon={Globe} />
@@ -335,7 +335,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="w-full lg:w-[400px] grid grid-cols-2 gap-4">
+            <div className="w-full lg:w-[400px] grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center flex flex-col justify-center">
                 <GraduationCap className="w-8 h-8 text-[#0052FF] mx-auto mb-3" />
                 <p className="font-bold text-white mb-1">Students</p>

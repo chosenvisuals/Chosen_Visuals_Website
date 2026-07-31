@@ -32,7 +32,7 @@ export default function SchoolTourPage() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 Many students are unaware of the viable career paths available in the creative and tech industries. The School Tour is our initiative to bridge that gap. We bring industry professionals directly to the students to share insights, conduct mini-workshops, and ignite passion.
               </p>
-              <div className="grid grid-cols-2 gap-6 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                 <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                   <div className="w-12 h-12 bg-blue-100 text-[#0052FF] rounded-xl flex items-center justify-center mb-4"><Users className="w-6 h-6" /></div>
                   <h4 className="text-3xl font-black text-[#000d26]">15,000+</h4>
@@ -45,7 +45,7 @@ export default function SchoolTourPage() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="relative h-64 rounded-3xl overflow-hidden shadow-lg mt-8">
                 <Image src="https://picsum.photos/seed/chosen35/800/600" alt="School Tour" fill className="object-cover" />
               </div>

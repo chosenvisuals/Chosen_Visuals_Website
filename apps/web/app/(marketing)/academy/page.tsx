@@ -107,7 +107,7 @@ export default function AcademyLandingPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             <SchoolCard icon={Layout} color="text-pink-600" title="Design" courses={12} />
             <SchoolCard icon={Code} color="text-blue-600" title="Programming" courses={15} />
             <SchoolCard icon={Shield} color="text-green-600" title="Cybersecurity" courses={10} />
@@ -219,7 +219,7 @@ export default function AcademyLandingPage() {
                  </div>
                </div>
 
-               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-100">
+               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-100">
                  <div>
                    <p className="text-3xl font-bold text-[#000d26]">10K+</p>
                    <p className="text-xs text-gray-500 font-medium mt-1">Students Empowered</p>
